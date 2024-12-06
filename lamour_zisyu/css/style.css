@@ -1,0 +1,798 @@
+@charset "UTF-8";
+
+/** -----------------------------------
+    共通部分
+-------------------------------------**/
+html {
+    font-size: 100%
+}
+body {
+    font-family: "Yu Gothic", YuGothic, Helvetica, Arial,
+    "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3",
+    Meiryo, メイリオ, sans-serif;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%
+}
+.section-inner {
+    width: 100%;
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 60px 16px;
+}
+
+/** -------- スマホ -------- **/
+@media screen and (max-width: 768px) {
+    .section-inner {
+        padding:  0 24px;
+        max-width: 550px;
+    }
+}
+
+/** -----------------------------------
+    見出し
+-------------------------------------**/
+
+.title {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 100px;
+    letter-spacing: normal;
+    color: #b1907d;
+    text-align: center;
+}
+.title-ja {
+    font-size: 0.875rem;
+    letter-spacing: normal;
+    display: block;
+    margin-bottom: 40px;
+    color: #de3e5a;
+}
+
+/** -------- スマホ -------- **/
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 50px;
+    }
+}
+
+/** -----------------------------------
+    レイアウト
+-------------------------------------**/
+.col-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col-2 .item {
+    width: calc((100% - 24px)/2);
+}
+
+.col-3 {
+    display: flex;
+    justify-content: space-between;
+}
+.col-3 .item {
+    width: calc((100% - 55px)/3);
+}
+.wide-col {
+    width: 100%;
+    max-width: 1200px;
+    margin: 80px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.col-left {
+    width: calc((100% - 20px)/2);
+}
+.col-right {
+    width: calc((100% - 20px)/2);
+}
+
+/** -------- スマホ -------- **/
+@media screen and (max-width: 768px) {
+    .col-2 {
+        display: block;
+    }
+    .col-2 .item {
+        width: 100%;
+    } 
+    .col-3 {
+        display: block;
+    }
+    .col-3 .item {
+        width: 100%;
+    }
+}
+/** -----------------------------------
+    テキスト
+-------------------------------------**/
+h2.large {
+    font-size: 36px;
+    color: #4b2826;
+    font-weight: bold;
+    line-height: 60px;
+    margin-bottom: 40px;
+}
+h2.medium {
+    font-size: 24px;
+    color: #4b2826;
+    font-weight: bold;
+    line-height: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+p.medium {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+}
+/** -------- スマホ -------- **/
+@media screen and (max-width: 768px) {
+    h2.large {
+        font-size: 30px;
+        line-height: 50px;
+    }
+    h2.medium {
+        font-size: 20px;
+    }
+}
+/** -----------------------------------
+    ボタン
+-------------------------------------**/
+.button-be {
+    font-family: 'Montserrat Alternates', sans-serif;
+    display: block;
+    width: 198px;
+    height: 50px;
+    background-color: #f8eeec;
+    color: #de3e5a;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 25px;
+    border: 2px solid #4b2826;
+    transition: .3s;
+}
+.button-pink {
+    display: block;
+    width: 198px;
+    height: 50px;
+    background-color: #de3e5a;
+    color: #f8eeec;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 25px;
+    border: 2px solid #4b2826;
+    transition: .3s;
+}
+
+.button-be:hover {
+    background-color: #de3e5a;
+    color: #f8eeec;
+}
+.button-pink:hover {
+    background-color: #f8eeec;
+    color: #de3e5a;
+}
+
+/** -----------------------------------
+    ヘッダー
+-------------------------------------**/
+#header {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.header-logo {
+    display: flex;
+    align-items: center;
+    width: 150px;
+}
+.header-logo a {
+    display: flex;
+}
+.gnav-pc-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul.gnav-pc li {
+    display: inline;
+    margin-right: 40px;
+}
+
+ul.gnav-pc li a {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    color: #4b2826;
+    font-weight: bold;
+    transition: .3s;
+}
+
+ul.gnav-pc li a:hover {
+    color: #de3e5a;
+}
+.hamburger-menu {
+    display: none;
+}
+
+/** -------- スマホ -------- **/
+@media screen and (min-width: 769px) {
+    .sp-menu {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .gnav-pc-wrap {
+        display: none;
+    }
+    #header {
+        height: 60px;
+        padding: 0;
+    }
+
+    #header h1 {
+        padding-left: 20px;
+    }
+
+    #header h1 a {
+        display: flex;
+    }
+
+    /** -------- ここからハンバーガーメニューの実装 -------- **/
+    .sp-menu__box {
+    position: fixed;  
+    top: 5px;  
+    right: 0;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    z-index: 100;
+    background-color: #4b2826;
+    border-radius: 10%;
+    }
+    .sp-menu__box span,         
+    .sp-menu__box span:before,  
+    .sp-menu__box span:after {  
+    content: "";
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #f8eeec;
+    position: absolute;
+    }
+    .sp-menu__box span:before {
+    bottom: 8px;
+    }
+    .sp-menu__box span:after {
+    top: 8px;
+    }
+    
+    #sp-menu__check {
+    display: none;
+    }
+    #sp-menu__check:checked ~ .sp-menu__box span {
+    background: rgba(255, 255, 255, 0);
+    }
+
+    #sp-menu__check:checked ~ .sp-menu__box span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+    }
+    #sp-menu__check:checked ~ .sp-menu__box span::after {
+    top: 0;
+    transform: rotate(-45deg);
+    }
+    #sp-menu__check:checked ~ .hamburger__content {
+    left: 0;
+    }
+    .sp-menu__content {
+    position: fixed;
+    width: 100%;
+    height: 50%;
+    top: 0;
+    left: 100%;
+    z-index: 90;
+    background-color: #b1907d;
+    transition: all 0.5s;
+    }
+    .sp-menu__list {
+    padding: 70px 10px 0;
+    }
+    .sp-menu__item {
+    list-style: none;
+    }
+    .sp-menu__link {
+    font-family: 'Montserrat Alternates', sans-serif;
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    box-sizing: border-box;
+    color: #4b2826;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    }
+    #sp-menu__check:checked ~ .sp-menu__content {
+        left: 0;
+    }
+}
+/** -----------------------------------
+    リボン
+-------------------------------------**/
+.ribbon {
+    top: 150px;
+    left: 100px;
+    display: inline-block;
+    position: relative;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    padding: 7px 0;
+    font-size: 26px;
+    background: #de3e5a;
+    color: #f8eeec;
+    box-sizing: border-box;
+}
+.ribbon p {
+    margin: 0;
+    padding: 0 30px 0 15px;
+    border-top: dashed 2px #b1907d;;
+    border-bottom: dashed 2px #b1907d;;
+    line-height: 40px;
+    font-weight: bold;
+}
+.ribbon a {
+    font-size: 18px;
+}
+.ribbon a:hover {
+    text-decoration: underline;
+}
+
+/** -------- スマホ -------- **/
+@media screen and (max-width: 768px) {
+    .ribbon {
+        top: 120px;
+        left: 0px;
+        height: 80px;
+    }
+    .ribbon p {
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: bold;
+    }
+    .ribbon a {
+        font-size: 12px;
+    }
+}
+
+
+/** -----------------------------------
+    メインビジュアル
+-------------------------------------**/
+#mainvisual {
+    width: 100vw;
+    height: calc(100vh - 50px);
+    background-image: url("../images/mainvisual-pc.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+/** -------- スマホ -------- **/
+@media screen and (max-width: 768px) {
+    #mainvisual {
+        width: 100vw;
+        background-image: url(../images/mainvisual-sp.jpg);
+        margin-bottom: 30px;
+        }
+}
+/** -----------------------------------
+    About
+-------------------------------------**/
+.about-pic {
+    position: relative;
+}
+
+.cake-pic {
+    width: 350px;
+    height: auto;
+    position: absolute;
+    top: 120px;
+    border-radius: 20px;
+}
+.ichigo-pic {
+    width: 280px;
+    height: auto;
+    position: absolute;
+    top: 330px;
+    left: 90px;
+    border-radius: 20px;
+}
+.cake-sp-pic {
+    display: none;
+}
+
+/** -------- スマホ -------- **/
+@media screen and (max-width: 768px) {
+    .about-pic {
+        position: static;
+    }
+    .cake-pic {
+        margin-top: 50px;
+        display: none;
+    }
+    .ichigo-pic{
+        position: static;
+        display: none;
+    }
+    .cake-sp-pic {
+        display: block;
+        margin-top: 30px;
+    }
+}
+/** -----------------------------------
+    News
+-------------------------------------**/
+#news p.medium {
+    color: #de3e5a;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 14px;
+    margin-bottom: 10px;
+
+}
+#news h3.medium {
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 25px;
+}
+.card {
+    height: 100%;
+    background-color: #f8eeec;
+    border-radius: 30px;
+    transition: .3s;
+}
+
+.card .card-text {
+    padding: 20px 20px 32px 20px;
+}
+#news .button {
+    align-items: center;
+}
+
+#news .button-be {
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.card:hover {
+    opacity: 0.8;
+}
+/** -------- スマホ -------- **/
+@media screen and (max-width: 768px) {
+    .card {
+        width: 300px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+}
+/** -----------------------------------
+    Products
+-------------------------------------**/
+#products .button-be {
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.banner-pc {
+    display: block;
+    margin-top: 40px;
+    transition: .3s;
+}
+.banner-sp {
+    display: none;
+}
+.banner-pc:hover {
+    opacity: 0.8;
+}
+
+/** -------- スライダー -------- **/
+.responsive {
+    max-width: 960px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.responsive img {
+    margin: 0 2px;
+    width: auto;
+    height: 200px;
+    object-fit: cover;
+}
+
+/** -------- スマホ -------- **/
+@media screen and (max-width: 768px){
+    .banner-pc {
+        display: none;
+    }
+    .banner-sp {
+        display: block;
+        text-align: center;
+        margin-top: 40px;
+        transition: .3s;
+    }
+    .banner-sp:hover {
+        opacity: 0.8;
+    }
+    .responsive img {
+        width: auto;
+        height: 270px;
+        object-fit: cover;
+    }
+}
+/** -----------------------------------
+    Present
+-------------------------------------**/
+#present {
+    background-color: #f8eeec;
+    background-image: url(../images/present-cookie1.png), url(../images/present-cookie2.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top right, bottom left;
+}
+#present .wide-col {
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+.present-pic {
+    position: relative;
+}
+.yaki-pic {
+    position: absolute;
+    width: 410px;
+    height: 410px;
+    border-radius: 400px;
+    object-fit: cover;
+    top: 100px;
+    left: 30px;
+}
+.yaki-sp-pic{
+    display: none;
+}
+.line-qr {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    top: 400px;
+    left: 230px;
+}
+.line-sp-pic {
+    display: none;
+}
+#present p.medium span {
+    display: none;
+}
+#present h3.medium {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 30px;
+}
+#present .button-pink {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/** -------- スマホ -------- **/
+@media screen and (max-width: 850px) {
+    #present {
+        background-size: 150px;
+        background-position: top right, bottom left;
+    }
+    #present .wide-col {
+        display: flex;
+        flex-direction: column;
+    }
+    #present .col-left {
+        width: 100%;
+    }
+    #present .col-right {
+        width: 100%;
+        padding: 0 10px;
+        margin-bottom: 50px;
+    }
+    .present-pic {
+        position: static;
+    }
+    .yaki-sp-pic {
+        display: block;
+        width: 410px;
+        height: 410px;
+        border-radius: 400px;
+        object-fit: cover;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    .yaki-pic {
+        position: static;
+        display: none;
+    }
+    .line-qr {
+        position: static;
+        display: none;
+    }
+    .line-sp-pic {
+        display: block;
+        width: 100px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    #present p.medium span {
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+}
+/** -----------------------------------
+    Store
+-------------------------------------**/
+.content {
+    max-width: 1000px;
+    height: 698px;
+    margin: 100px auto;
+    position: relative;
+}
+.store-text {
+    max-width: 680px;
+    background-color: #4b2826;
+    padding: 50px 150px 70px 50px;
+    position: absolute;
+    left: 0;
+}
+.store-img {
+    max-width: 500px;
+    position: absolute;
+    top: 160px;
+    right: 0px;
+}
+
+.store-text dl {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 40px;
+}
+.store-text dl dt {
+    color: #f8eeec;
+    width: 20%;
+    margin-top: 10px;
+}
+.store-text dl dt:first-of-type {
+    margin-top: 0;
+}
+.store-text dl dd {
+    color: #f8eeec;
+    width: 80%;
+    margin-top: 10px;
+}
+.store-text dl dd:first-of-type {
+    margin-top: 0;
+}
+#store p.medium {
+    color: #f8eeec;
+    margin-top: 80px;
+}
+
+/** -------- スマホ -------- **/
+@media screen and (max-width: 850px) {
+    .content {
+        height: auto;
+        position: static;
+        margin: 0;
+    }
+    .store-text {
+        max-width: 100%;
+        padding: 60px 20px;
+        position: static;
+    }
+    .store-img {
+        max-width: 100%;
+        position: static;
+        margin-bottom: 40px;
+    }
+
+}
+
+/** -----------------------------------
+    フッター
+-------------------------------------**/
+#footer {
+    background-color: #b1907d;
+    padding: 40px 0 5px 0;
+}  
+.footer-inner {
+    width: 100%;
+    max-width: 960px;
+    margin: 50px auto;
+    padding: 0 16px;
+}
+.footer-logo {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    margin-bottom: 30px;
+}
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-link {
+    display: flex;
+    align-items: center;
+}
+ul.footer-link li {
+    display: inline;
+    margin-right: 40px;
+}
+ul.footer-link li a {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    color: #4b2826;
+}
+.sns-btn {
+    display: flex;
+}
+.sns-icon img{
+    width: 50px;
+    height: auto;
+    margin-left: 30px;
+}
+p.copyright {
+    font-size: small;
+    color: #4b2826;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/** -------- スマホ -------- **/
+@media screen and (max-width: 768px) {
+    #footer {
+        padding: 40px 0 20px 0;
+    }
+    .footer-logo {
+        width: 200px;
+    }
+    .footer-nav {
+        flex-direction: column;
+    }
+    .footer-link {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .sns-icon img{
+        width: 30px;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+}
